@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
             submitButton.innerText = "Sending...";
 
             const serviceID = 'service_m4yi48d';
-            const templateID = 'template_vljgshc';
+            const templateID = 'template_dx5jmx8';
 
             emailjs.sendForm(serviceID, templateID, this)
                 .then(function() {
