@@ -1,5 +1,4 @@
-
-  (function ($) {
+(function ($) {
   
   "use strict";
 
@@ -28,6 +27,45 @@
       }
     });
   
-  })(window.jQuery);
+})(window.jQuery);
 
+// --- EmailJS Contact Form Integration ---
+document.addEventListener('DOMContentLoaded', function() {
+    const contactForm = document.getElementById('contact-form');
+    
+    if(contactForm) {
+        contactForm.addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the page from reloading
 
+            // Get the submit button to update its text for user feedback
+            const submitButton = this.querySelector('button[type="submit"]');
+            const originalText = submitButton.innerText;
+            submitButton.innerText = "Sending...";
+
+            // REPLACE these strings with your actual IDs from the EmailJS dashboard
+            const serviceID = 'YOUR_SERVICE_ID';
+            const templateID = 'YOUR_TEMPLATE_ID';
+
+            // Send the form data
+            emailjs.sendForm(serviceID, templateID, this)
+                .then(function() {
+                    console.log('SUCCESS!');
+                    submitButton.innerText = "Message Sent!";
+                    contactForm.reset(); // Clear the form fields
+                    
+                    // Reset button text back to normal after 3 seconds
+                    setTimeout(() => {
+                        submitButton.innerText = originalText;
+                    }, 3000);
+                }, function(error) {
+                    console.log('FAILED...', error);
+                    submitButton.innerText = "Error - Try Again";
+                    
+                    // Reset button text back to normal after 3 seconds
+                    setTimeout(() => {
+                        submitButton.innerText = originalText;
+                    }, 3000);
+                });
+        });
+    }
+});
