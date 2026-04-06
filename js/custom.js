@@ -43,8 +43,8 @@ document.addEventListener('DOMContentLoaded', function() {
             submitButton.innerText = "Sending...";
 
             // REPLACE these strings with your actual IDs from the EmailJS dashboard
-            const serviceID = 'YOUR_SERVICE_ID';
-            const templateID = 'YOUR_TEMPLATE_ID';
+            const serviceID = 'service_m4yi48d';
+            const templateID = 'template_vljgshc';
 
             // Send the form data
             emailjs.sendForm(serviceID, templateID, this)
