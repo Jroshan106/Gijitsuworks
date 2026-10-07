@@ -18,7 +18,7 @@ export default function Hero() {
   return (
     <section id="home" className="relative min-h-screen flex items-center pt-20 overflow-hidden">
       {/* Abstract Background Elements */}
-      <div className="absolute top-0 left-0 w-full h-full overflow-hidden -z-10">
+      <div className="absolute top-0 left-0 w-full h-full overflow-hidden z-0 pointer-events-none">
         <motion.div 
           animate={{ scale: [1, 1.2, 1], rotate: [0, 90, 0] }}
           transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
