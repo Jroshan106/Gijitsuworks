@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 export default function Contact() {
   const form = useRef<HTMLFormElement>(null);
   const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
+  const [errorMessage, setErrorMessage] = useState('');
   const [name, setName] = useState('');
 
   const sendEmail = (e: React.FormEvent) => {
@@ -25,8 +26,8 @@ export default function Contact() {
         setTimeout(() => setStatus('idle'), 4000);
     }, (error) => {
         console.error(error.text);
+        setErrorMessage(error.text || 'Unknown error occurred');
         setStatus('error');
-        setTimeout(() => setStatus('idle'), 4000);
     });
   };
 
@@ -99,9 +100,9 @@ export default function Contact() {
                 <span>{status === 'sending' ? 'Sending...' : 'Send Message'}</span>
               </button>
               
-              <div className="h-6 mt-4">
+              <div className="h-6 mt-4 text-center">
                 {status === 'success' && <p className="text-accentLight text-sm font-medium animate-pulse">Message sent successfully! We'll be in touch.</p>}
-                {status === 'error' && <p className="text-red-400 text-sm font-medium">Something went wrong. Please try again.</p>}
+                {status === 'error' && <p className="text-red-400 text-sm font-medium">Error: {errorMessage}</p>}
               </div>
             </div>
           </form>
