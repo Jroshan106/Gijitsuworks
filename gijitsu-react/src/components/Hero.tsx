@@ -40,7 +40,7 @@ export default function Hero() {
           {techIcons.map((item, idx) => (
             <motion.div
               key={idx}
-              className={`absolute ${item.color} opacity-20 md:opacity-40 blur-[1px] md:blur-none`}
+              className={`absolute ${item.color} opacity-60 md:opacity-90 drop-shadow-lg`}
               style={{ left: item.left, top: item.top }}
               animate={{ 
                 y: [0, -30, 0],
