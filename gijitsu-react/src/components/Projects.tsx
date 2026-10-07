@@ -5,6 +5,7 @@ export default function Projects() {
   const projects = [
     {
       title: "Mark Tours",
+      subtitle: "Terminated",
       category: "Travel & Booking",
       description: "A modern tourism platform engineered for seamless hotel and service bookings.",
       image: "/images/marktours.png",
@@ -12,6 +13,7 @@ export default function Projects() {
     },
     {
       title: "Ceylon Produce Exports",
+      subtitle: "Active",
       category: "B2B E-commerce",
       description: "A high-performance storefront for premium export products with full backend integration.",
       image: "/images/cpe.png",
@@ -77,7 +79,12 @@ export default function Projects() {
                   <span className="text-xs font-bold uppercase tracking-wider text-accentLight">{project.category}</span>
                   <span className="w-8 h-[1px] bg-gray-700"></span>
                 </div>
-                <h4 className="text-3xl font-display font-bold text-white mb-3 group-hover:text-primaryLight transition-colors">{project.title}</h4>
+                <div className="flex items-center gap-3 mb-3 flex-wrap">
+                  <h4 className="text-3xl font-display font-bold text-white group-hover:text-primaryLight transition-colors">{project.title}</h4>
+                  <span className={`inline-flex items-center rounded-full border px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.18em] ${project.subtitle === "Active" ? "border-emerald-500/30 bg-emerald-500/10 text-emerald-400" : "border-red-500/20 bg-red-500/10 text-red-400"}`}>
+                    {project.subtitle}
+                  </span>
+                </div>
                 <p className="text-gray-400 font-light leading-relaxed">{project.description}</p>
               </div>
             </motion.a>
