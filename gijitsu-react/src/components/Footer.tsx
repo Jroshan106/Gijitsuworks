@@ -1,4 +1,5 @@
 import { Linkedin, MessageCircle, Github } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export default function Footer() {
   return (
@@ -7,7 +8,7 @@ export default function Footer() {
         
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           <div className="lg:col-span-2">
-            <a href="#home" className="flex items-center gap-3 mb-6 inline-flex group">
+            <a href="/#home" className="flex items-center gap-3 mb-6 inline-flex group">
               <img src="/images/logo.png" alt="Gijitsu Works" className="h-16 w-auto group-hover:scale-105 transition-transform" />
             </a>
             <p className="text-gray-400 font-light max-w-sm leading-relaxed mb-8">
@@ -41,9 +42,9 @@ export default function Footer() {
           <div>
             <h5 className="text-white font-display font-semibold mb-6">Navigation</h5>
             <ul className="space-y-4 font-light text-gray-400">
-              <li><a href="#home" className="hover:text-white transition-colors">Studio</a></li>
-              <li><a href="#services" className="hover:text-white transition-colors">Expertise</a></li>
-              <li><a href="#projects" className="hover:text-white transition-colors">Work</a></li>
+              <li><a href="/#home" className="hover:text-white transition-colors">Studio</a></li>
+              <li><a href="/#services" className="hover:text-white transition-colors">Expertise</a></li>
+              <li><a href="/#projects" className="hover:text-white transition-colors">Work</a></li>
             </ul>
           </div>
         </div>
@@ -53,8 +54,8 @@ export default function Footer() {
             © {new Date().getFullYear()} Gijitsu Works. All rights reserved.
           </p>
           <div className="flex gap-6 text-sm text-gray-500 font-light">
-            <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
+            <Link to="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
+            <Link to="/terms" className="hover:text-white transition-colors">Terms of Service</Link>
           </div>
         </div>
         

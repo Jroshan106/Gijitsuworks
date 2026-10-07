@@ -45,7 +45,7 @@ export default function About() {
               </p>
             </div>
             
-            <a href="#services" className="inline-flex items-center text-white font-medium hover:text-primaryLight transition-colors group">
+            <a href="/#services" className="inline-flex items-center text-white font-medium hover:text-primaryLight transition-colors group">
               Explore our capabilities <motion.span className="ml-2 group-hover:translate-x-2 transition-transform">→</motion.span>
             </a>
           </motion.div>

@@ -93,11 +93,11 @@ export default function Hero() {
             transition={{ duration: 0.7, delay: 0.6 }}
             className="flex flex-col sm:flex-row gap-5 w-full sm:w-auto"
           >
-            <a href="#projects" className="btn-primary group shadow-[0_0_20px_rgba(79,70,229,0.3)] hover:shadow-[0_0_30px_rgba(79,70,229,0.5)]">
+            <a href="/#projects" className="btn-primary group shadow-[0_0_20px_rgba(79,70,229,0.3)] hover:shadow-[0_0_30px_rgba(79,70,229,0.5)]">
               View Our Work
               <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </a>
-            <a href="#about" className="btn-outline backdrop-blur-sm bg-surface/30">
+            <a href="/#about" className="btn-outline backdrop-blur-sm bg-surface/30">
               Who We Are
             </a>
           </motion.div>
