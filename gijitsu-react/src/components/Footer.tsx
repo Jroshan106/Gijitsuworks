@@ -14,19 +14,42 @@ export default function Footer() {
             <p className="text-gray-400 font-light max-w-sm leading-relaxed mb-8">
               A modern digital studio crafting high-performance web experiences.
             </p>
-            <div className="flex gap-4">
-              <a href="#" className="w-10 h-10 rounded-full bg-surface border border-gray-800 flex items-center justify-center text-gray-400 hover:bg-primary hover:text-white hover:border-primary transition-all duration-300">
-                <Linkedin size={18} />
-              </a>
-              <a href="https://github.com/Jroshan106" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full bg-surface border border-gray-800 flex items-center justify-center text-gray-400 hover:bg-primary hover:text-white hover:border-primary transition-all duration-300">
-                <Github size={18} />
-              </a>
-              <a href="#" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full bg-surface border border-gray-800 flex items-center justify-center text-gray-400 hover:bg-primary hover:text-white hover:border-primary transition-all duration-300">
-                <Github size={18} />
-              </a>
-              <a href="https://wa.me/message/ICU5XS2G3WG7N1" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-surface border border-gray-800 flex items-center justify-center text-gray-400 hover:bg-accent hover:text-white hover:border-accent transition-all duration-300">
-                <MessageCircle size={18} />
-              </a>
+            <div className="flex gap-6 mt-4">
+              <div className="group relative">
+                <a href="#" className="flex">
+                  <Linkedin className="w-7 h-7 text-gray-400 hover:scale-125 duration-200 hover:stroke-primary transition-all" strokeWidth={1.5} />
+                </a>
+                <span className="absolute -top-12 left-[50%] -translate-x-[50%] z-20 origin-bottom scale-0 px-3 rounded-lg border border-gray-700 bg-surfaceLight py-1.5 text-sm font-medium text-white shadow-xl transition-all duration-300 ease-in-out group-hover:scale-100">
+                  LinkedIn
+                </span>
+              </div>
+
+              <div className="group relative">
+                <a href="https://github.com/Jroshan106" target="_blank" rel="noreferrer" className="flex">
+                  <Github className="w-7 h-7 text-gray-400 hover:scale-125 duration-200 hover:stroke-primary transition-all" strokeWidth={1.5} />
+                </a>
+                <span className="absolute -top-12 left-[50%] -translate-x-[50%] z-20 origin-bottom scale-0 px-3 rounded-lg border border-gray-700 bg-surfaceLight py-1.5 text-sm font-medium text-white shadow-xl transition-all duration-300 ease-in-out group-hover:scale-100 whitespace-nowrap">
+                  GitHub @Roshan
+                </span>
+              </div>
+
+              <div className="group relative">
+                <a href="#" target="_blank" rel="noreferrer" className="flex">
+                  <Github className="w-7 h-7 text-gray-400 hover:scale-125 duration-200 hover:stroke-primary transition-all" strokeWidth={1.5} />
+                </a>
+                <span className="absolute -top-12 left-[50%] -translate-x-[50%] z-20 origin-bottom scale-0 px-3 rounded-lg border border-gray-700 bg-surfaceLight py-1.5 text-sm font-medium text-white shadow-xl transition-all duration-300 ease-in-out group-hover:scale-100 whitespace-nowrap">
+                  GitHub @Hakshan
+                </span>
+              </div>
+
+              <div className="group relative">
+                <a href="https://wa.me/message/ICU5XS2G3WG7N1" target="_blank" rel="noopener noreferrer" className="flex">
+                  <MessageCircle className="w-7 h-7 text-gray-400 hover:scale-125 duration-200 hover:stroke-accent transition-all" strokeWidth={1.5} />
+                </a>
+                <span className="absolute -top-12 left-[50%] -translate-x-[50%] z-20 origin-bottom scale-0 px-3 rounded-lg border border-gray-700 bg-surfaceLight py-1.5 text-sm font-medium text-white shadow-xl transition-all duration-300 ease-in-out group-hover:scale-100">
+                  WhatsApp
+                </span>
+              </div>
             </div>
           </div>
           
