@@ -9,7 +9,6 @@ export default function Footer() {
           <div className="lg:col-span-2">
             <a href="#home" className="flex items-center gap-3 mb-6 inline-flex group">
               <img src="/images/logo.png" alt="Gijitsu Works" className="h-10 w-auto group-hover:scale-105 transition-transform" />
-              <span className="text-xl font-display font-bold text-white tracking-wide">Gijitsu.</span>
             </a>
             <p className="text-gray-400 font-light max-w-sm leading-relaxed mb-8">
               A modern digital studio crafting high-performance web experiences.
