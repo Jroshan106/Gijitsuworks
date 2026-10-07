@@ -1,4 +1,4 @@
-import { Linkedin, Twitter, MessageCircle, Github } from 'lucide-react';
+import { Linkedin, MessageCircle, Github } from 'lucide-react';
 
 export default function Footer() {
   return (
