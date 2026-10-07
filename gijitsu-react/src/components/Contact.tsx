@@ -1,6 +1,7 @@
 import { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import { Send } from 'lucide-react';
+import { motion } from 'framer-motion';
 
 export default function Contact() {
   const form = useRef<HTMLFormElement>(null);
@@ -33,13 +34,23 @@ export default function Contact() {
     <section id="contact" className="section-padding relative">
       <div className="container mx-auto px-6">
         
-        <div className="max-w-4xl mx-auto glass-panel p-8 md:p-16 border-gray-800 relative overflow-hidden">
+        <motion.div 
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.7 }}
+          className="max-w-4xl mx-auto glass-panel p-8 md:p-16 border-gray-800 relative overflow-hidden"
+        >
           
           {/* Abstract Shape */}
-          <div className="absolute -top-24 -right-24 w-64 h-64 bg-primary/20 rounded-full blur-[80px] pointer-events-none"></div>
+          <motion.div 
+            animate={{ scale: [1, 1.2, 1], rotate: [0, 180, 360] }}
+            transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+            className="absolute -top-24 -right-24 w-64 h-64 bg-primary/20 rounded-full blur-[80px] pointer-events-none"
+          />
 
           <div className="text-center mb-12 relative z-10">
-            <h2 className="text-4xl md:text-5xl font-display font-bold text-white mb-4">Let's build Your Own Project.</h2>
+            <h2 className="text-4xl md:text-5xl font-display font-bold text-white mb-4">Let's build the future.</h2>
             <p className="text-gray-400 text-lg font-light">Tell us about your project and we'll get back to you shortly.</p>
           </div>
 
@@ -49,14 +60,14 @@ export default function Contact() {
                 <label htmlFor="full-name" className="block text-xs font-medium text-gray-400 uppercase tracking-widest mb-2">Name</label>
                 <input type="text" name="full-name" id="full-name" required 
                   className="w-full bg-surface/50 border border-gray-700 rounded-xl px-4 py-4 text-white focus:outline-none focus:border-primaryLight focus:ring-1 focus:ring-primaryLight transition-all placeholder:text-gray-600 font-light"
-                  placeholder="Peter Parker"
+                  placeholder="John Doe"
                 />
               </div>
               <div>
                 <label htmlFor="email" className="block text-xs font-medium text-gray-400 uppercase tracking-widest mb-2">Email</label>
                 <input type="email" name="email" id="email" required 
                   className="w-full bg-surface/50 border border-gray-700 rounded-xl px-4 py-4 text-white focus:outline-none focus:border-primaryLight focus:ring-1 focus:ring-primaryLight transition-all placeholder:text-gray-600 font-light"
-                  placeholder="peter@gmail.com"
+                  placeholder="john@example.com"
                 />
               </div>
             </div>
@@ -70,14 +81,16 @@ export default function Contact() {
             </div>
             
             <div className="pt-4 flex flex-col items-center">
-              <button 
+              <motion.button 
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
                 type="submit" 
                 disabled={status === 'sending'}
                 className="btn-primary w-full md:w-auto md:px-12 flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed"
               >
                 {status === 'sending' ? 'Sending...' : 'Send Message'}
                 <Send size={18} />
-              </button>
+              </motion.button>
               
               <div className="h-6 mt-4">
                 {status === 'success' && <p className="text-accentLight text-sm font-medium animate-pulse">Message sent successfully! We'll be in touch.</p>}
@@ -86,7 +99,7 @@ export default function Contact() {
             </div>
           </form>
           
-        </div>
+        </motion.div>
       </div>
     </section>
   );
