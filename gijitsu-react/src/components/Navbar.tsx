@@ -42,7 +42,7 @@ export default function Navbar() {
               ))}
             </ul>
             <a href="#contact" className="btn-primary py-2.5 px-7 text-sm">
-              Let's Talk
+              Create Your Project
             </a>
           </div>
 
