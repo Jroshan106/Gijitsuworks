@@ -1,4 +1,4 @@
-import { ArrowRight, Sparkles } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { SiReact, SiNodedotjs, SiTypescript, SiHtml5, SiCss, SiCplusplus, SiPython, SiAndroidstudio, SiXcode } from 'react-icons/si';
 
