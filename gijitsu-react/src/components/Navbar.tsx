@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Code2 } from 'lucide-react';
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -7,78 +7,78 @@ export default function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
+      setIsScrolled(window.scrollY > 20);
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   const navLinks = [
-    { name: 'Home', href: '#home' },
-    { name: 'About Us', href: '#about' },
-    { name: 'Services', href: '#services' },
-    { name: 'Projects', href: '#projects' },
-    { name: 'Contact', href: '#contact' },
+    { name: 'Studio', href: '#home' },
+    { name: 'Expertise', href: '#services' },
+    { name: 'Work', href: '#projects' },
   ];
 
   return (
-    <nav className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'bg-white shadow-md py-3' : 'bg-transparent py-5'}`}>
-      <div className="container mx-auto px-6 lg:px-12">
-        <div className="flex items-center justify-between">
-          <a href="#home" className="flex items-center gap-3">
-            <img src="/images/logo.png" alt="Gijitsu Works" className="h-10 w-auto" />
-            <span className={`text-xl font-bold ${isScrolled ? 'text-gray-900' : 'text-white'}`}>Gijitsu Works</span>
+    <nav className={`fixed w-full z-50 transition-all duration-500 ${isScrolled ? 'py-4' : 'py-6'}`}>
+      <div className="container mx-auto px-6">
+        <div className={`flex items-center justify-between transition-all duration-500 ${isScrolled ? 'glass-panel px-6 py-3' : 'px-2'}`}>
+          <a href="#home" className="flex items-center gap-3 group">
+            <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-primary to-accent flex items-center justify-center text-white rotate-3 group-hover:rotate-12 transition-transform">
+              <Code2 size={20} strokeWidth={2.5} />
+            </div>
+            <span className="text-xl font-display font-bold text-white tracking-wide">Gijitsu.</span>
           </a>
 
           {/* Desktop Menu */}
-          <div className="hidden lg:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-10">
             <ul className="flex items-center gap-8">
               {navLinks.map((link) => (
                 <li key={link.name}>
                   <a 
                     href={link.href}
-                    className={`font-medium hover:text-primary transition-colors ${isScrolled ? 'text-gray-700' : 'text-gray-200'}`}
+                    className="text-sm font-medium text-gray-400 hover:text-white transition-colors uppercase tracking-widest"
                   >
                     {link.name}
                   </a>
                 </li>
               ))}
             </ul>
-            <a href="#contact" className="btn-primary py-2 px-6">
-              Start a Project
+            <a href="#contact" className="btn-primary py-2.5 px-7 text-sm">
+              Let's Talk
             </a>
           </div>
 
           {/* Mobile Menu Toggle */}
-          <div className="lg:hidden">
+          <div className="md:hidden">
             <button 
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className={`${isScrolled ? 'text-gray-900' : 'text-white'}`}
+              className="text-white p-2"
             >
-              {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
+              {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
           </div>
         </div>
       </div>
 
       {/* Mobile Menu */}
-      {isMobileMenuOpen && (
-        <div className="lg:hidden absolute top-full left-0 w-full bg-white shadow-xl py-4 flex flex-col items-center gap-4">
+      <div className={`md:hidden absolute top-full left-0 w-full glass-panel border-t-0 border-x-0 rounded-none transition-all duration-300 overflow-hidden ${isMobileMenuOpen ? 'max-h-96 py-6 border-b border-gray-800' : 'max-h-0 py-0 border-none'}`}>
+        <div className="flex flex-col items-center gap-6">
           {navLinks.map((link) => (
             <a 
               key={link.name}
               href={link.href}
-              className="text-gray-800 font-medium text-lg w-full text-center py-2 hover:bg-gray-50"
+              className="text-white font-display text-lg tracking-wide hover:text-primary transition-colors"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               {link.name}
             </a>
           ))}
           <a href="#contact" className="btn-primary mt-2" onClick={() => setIsMobileMenuOpen(false)}>
-            Start a Project
+            Let's Talk
           </a>
         </div>
-      )}
+      </div>
     </nav>
   );
 }

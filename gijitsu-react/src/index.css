@@ -3,29 +3,33 @@
 @tailwind utilities;
 
 @layer base {
-  html {
-    scroll-behavior: smooth;
+  body {
+    @apply bg-background text-gray-300 font-sans;
   }
   
-  body {
-    @apply font-sans text-gray-800 antialiased selection:bg-primary selection:text-white;
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
   }
 }
 
 @layer components {
   .btn-primary {
-    @apply inline-block px-8 py-3 rounded-full bg-primary text-white font-semibold transition-all hover:bg-blue-600 hover:shadow-lg focus:ring-4 focus:ring-blue-300;
+    @apply inline-flex items-center justify-center px-8 py-3.5 rounded-full bg-gradient-to-r from-primary to-accent text-white font-medium tracking-wide transition-all duration-300 hover:shadow-[0_0_20px_rgba(79,70,229,0.4)] hover:-translate-y-1 focus:ring-4 focus:ring-primary/50;
   }
   
   .btn-outline {
-    @apply inline-block px-8 py-3 rounded-full border-2 border-white text-white font-semibold transition-all hover:bg-white hover:text-primary focus:ring-4 focus:ring-white;
+    @apply inline-flex items-center justify-center px-8 py-3.5 rounded-full border border-gray-700 bg-surface/50 text-white font-medium tracking-wide transition-all duration-300 hover:bg-surface hover:border-gray-500 hover:-translate-y-1;
   }
   
   .section-padding {
-    @apply py-20 md:py-32;
+    @apply py-24 md:py-32 relative z-10;
   }
   
   .section-title {
-    @apply text-3xl md:text-5xl font-bold mb-12 text-center;
+    @apply text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white tracking-tight;
+  }
+
+  .glass-panel {
+    @apply bg-surface/40 backdrop-blur-xl border border-gray-800 rounded-3xl;
   }
 }
