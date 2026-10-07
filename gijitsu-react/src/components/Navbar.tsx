@@ -24,7 +24,8 @@ export default function Navbar() {
       <div className="container mx-auto px-6">
         <div className={`flex items-center justify-between transition-all duration-500 ${isScrolled ? 'glass-panel px-6 py-3' : 'px-2'}`}>
           <a href="#home" className="flex items-center gap-3 group">
-            <img src="/images/logo.png" alt="Gijitsu Works" className="h-10 w-auto group-hover:scale-105 transition-transform" />
+            <img src="/images/logo.png" alt="Gijitsu Works" className="h-16 w-auto group-hover:scale-105 transition-transform" />
+            <span className="text-xl font-display font-bold text-white tracking-wide">Gijitsu.</span>
           </a>
 
           {/* Desktop Menu */}

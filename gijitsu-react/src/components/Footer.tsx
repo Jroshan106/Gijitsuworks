@@ -8,7 +8,8 @@ export default function Footer() {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           <div className="lg:col-span-2">
             <a href="#home" className="flex items-center gap-3 mb-6 inline-flex group">
-              <img src="/images/logo.png" alt="Gijitsu Works" className="h-10 w-auto group-hover:scale-105 transition-transform" />
+              <img src="/images/logo.png" alt="Gijitsu Works" className="h-16 w-auto group-hover:scale-105 transition-transform" />
+              <span className="text-xl font-display font-bold text-white tracking-wide">Gijitsu.</span>
             </a>
             <p className="text-gray-400 font-light max-w-sm leading-relaxed mb-8">
               A modern digital studio crafting high-performance web experiences.
@@ -30,7 +31,8 @@ export default function Footer() {
             <h5 className="text-white font-display font-semibold mb-6">Connect</h5>
             <ul className="space-y-4 font-light text-gray-400">
               <li><a href="mailto:gijitsuworks@gmail.com" className="hover:text-primaryLight transition-colors">gijitsuworks@gmail.com</a></li>
-              <li><a href="tel:+94767300195" className="hover:text-primaryLight transition-colors">+94 76 730 0195</a></li>
+              <li><a href="https://wa.me/message/ICU5XS2G3WG7N1" className="hover:text-primaryLight transition-colors">Contact Dev 01</a></li>
+              <li><a href="https://wa.me/message/ICU5XS2G3WG7N1" className="hover:text-primaryLight transition-colors">Contact Dev 02</a></li>
             </ul>
           </div>
           
