@@ -44,7 +44,7 @@ export default function Footer() {
 
               <div className="group relative">
                 <a href="https://wa.me/message/ICU5XS2G3WG7N1" target="_blank" rel="noopener noreferrer" className="flex">
-                  <MessageCircle className="w-7 h-7 text-gray-400 hover:scale-125 duration-200 hover:stroke-accent transition-all" strokeWidth={1.5} />
+                  <Whatsapp className="w-7 h-7 text-gray-400 hover:scale-125 duration-200 hover:stroke-accent transition-all" strokeWidth={1.5} />
                 </a>
                 <span className="absolute -top-12 left-[50%] -translate-x-[50%] z-20 origin-bottom scale-0 px-3 rounded-lg border border-gray-700 bg-surfaceLight py-1.5 text-sm font-medium text-white shadow-xl transition-all duration-300 ease-in-out group-hover:scale-100">
                   WhatsApp
