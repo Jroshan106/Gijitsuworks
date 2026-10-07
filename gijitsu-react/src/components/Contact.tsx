@@ -39,7 +39,7 @@ export default function Contact() {
           <div className="absolute -top-24 -right-24 w-64 h-64 bg-primary/20 rounded-full blur-[80px] pointer-events-none"></div>
 
           <div className="text-center mb-12 relative z-10">
-            <h2 className="text-4xl md:text-5xl font-display font-bold text-white mb-4">Let's build the future.</h2>
+            <h2 className="text-4xl md:text-5xl font-display font-bold text-white mb-4">Let's build Your Own Project.</h2>
             <p className="text-gray-400 text-lg font-light">Tell us about your project and we'll get back to you shortly.</p>
           </div>
 
@@ -49,14 +49,14 @@ export default function Contact() {
                 <label htmlFor="full-name" className="block text-xs font-medium text-gray-400 uppercase tracking-widest mb-2">Name</label>
                 <input type="text" name="full-name" id="full-name" required 
                   className="w-full bg-surface/50 border border-gray-700 rounded-xl px-4 py-4 text-white focus:outline-none focus:border-primaryLight focus:ring-1 focus:ring-primaryLight transition-all placeholder:text-gray-600 font-light"
-                  placeholder="John Doe"
+                  placeholder="Peter Parker"
                 />
               </div>
               <div>
                 <label htmlFor="email" className="block text-xs font-medium text-gray-400 uppercase tracking-widest mb-2">Email</label>
                 <input type="email" name="email" id="email" required 
                   className="w-full bg-surface/50 border border-gray-700 rounded-xl px-4 py-4 text-white focus:outline-none focus:border-primaryLight focus:ring-1 focus:ring-primaryLight transition-all placeholder:text-gray-600 font-light"
-                  placeholder="john@example.com"
+                  placeholder="peter@gmail.com"
                 />
               </div>
             </div>

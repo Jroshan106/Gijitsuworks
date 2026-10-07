@@ -22,10 +22,9 @@ export default function Navbar() {
   return (
     <nav className={`fixed w-full z-50 transition-all duration-500 ${isScrolled ? 'py-4' : 'py-6'}`}>
       <div className="container mx-auto px-6">
-        <div className={`flex items-center justify-between transition-all duration-500 ${isScrolled ? 'glass-panel px-6 py-3' : 'px-2'}`}>
+        <div className={`flex items-center justify-between transition-all duration-500 rounded-full ${isScrolled ? 'bg-surface/80 backdrop-blur-xl px-8 py-3 shadow-2xl' : 'px-2 py-2'}`}>
           <a href="#home" className="flex items-center gap-3 group">
             <img src="/images/logo.png" alt="Gijitsu Works" className="h-16 w-auto group-hover:scale-105 transition-transform" />
-            <span className="text-xl font-display font-bold text-white tracking-wide">Gijitsu.</span>
           </a>
 
           {/* Desktop Menu */}
@@ -73,7 +72,7 @@ export default function Navbar() {
             </a>
           ))}
           <a href="#contact" className="btn-primary mt-2" onClick={() => setIsMobileMenuOpen(false)}>
-            Let's Talk
+            Start Your Project
           </a>
         </div>
       </div>
