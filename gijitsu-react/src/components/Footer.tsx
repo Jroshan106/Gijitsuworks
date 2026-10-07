@@ -8,9 +8,7 @@ export default function Footer() {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           <div className="lg:col-span-2">
             <a href="#home" className="flex items-center gap-3 mb-6 inline-flex group">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-primary to-accent flex items-center justify-center text-white rotate-3 group-hover:rotate-12 transition-transform">
-                <Code2 size={20} strokeWidth={2.5} />
-              </div>
+              <img src="/images/logo.png" alt="Gijitsu Works" className="h-10 w-auto group-hover:scale-105 transition-transform" />
               <span className="text-xl font-display font-bold text-white tracking-wide">Gijitsu.</span>
             </a>
             <p className="text-gray-400 font-light max-w-sm leading-relaxed mb-8">
