@@ -81,16 +81,21 @@ export default function Contact() {
             </div>
             
             <div className="pt-4 flex flex-col items-center">
-              <motion.button 
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+              <button 
                 type="submit" 
                 disabled={status === 'sending'}
-                className="btn-primary w-full md:w-auto md:px-12 flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed"
+                className="animated-send-btn disabled:opacity-70 disabled:cursor-not-allowed mx-auto"
               >
-                {status === 'sending' ? 'Sending...' : 'Send Message'}
-                <Send size={18} />
-              </motion.button>
+                <div className="svg-wrapper-1">
+                  <div className="svg-wrapper">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width={24} height={24}>
+                      <path fill="none" d="M0 0h24v24H0z" />
+                      <path fill="currentColor" d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z" />
+                    </svg>
+                  </div>
+                </div>
+                <span>{status === 'sending' ? 'Sending...' : 'Send Message'}</span>
+              </button>
               
               <div className="h-6 mt-4">
                 {status === 'success' && <p className="text-accentLight text-sm font-medium animate-pulse">Message sent successfully! We'll be in touch.</p>}

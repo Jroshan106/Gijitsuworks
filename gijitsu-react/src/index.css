@@ -33,3 +33,58 @@
     @apply bg-surface/40 backdrop-blur-xl border border-gray-800 rounded-3xl;
   }
 }
+
+@layer components {
+  .animated-send-btn {
+    font-family: inherit;
+    font-size: 16px;
+    background: theme('colors.primary');
+    color: white;
+    padding: 0.8em 1.2em;
+    display: inline-flex;
+    align-items: center;
+    border: none;
+    border-radius: 9999px;
+    overflow: hidden;
+    transition: all 0.2s;
+    cursor: pointer;
+  }
+
+  .animated-send-btn span {
+    display: block;
+    margin-left: 0.5em;
+    transition: all 0.3s ease-in-out;
+    font-weight: 500;
+  }
+
+  .animated-send-btn svg {
+    display: block;
+    transform-origin: center center;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .animated-send-btn:hover .svg-wrapper {
+    animation: fly-1 0.6s ease-in-out infinite alternate;
+  }
+
+  .animated-send-btn:hover svg {
+    transform: translateX(1.2em) rotate(45deg) scale(1.1);
+  }
+
+  .animated-send-btn:hover span {
+    transform: translateX(5em);
+  }
+
+  .animated-send-btn:active {
+    transform: scale(0.95);
+  }
+}
+
+@keyframes fly-1 {
+  from {
+    transform: translateY(0.1em);
+  }
+  to {
+    transform: translateY(-0.1em);
+  }
+}

@@ -10,10 +10,10 @@ export default {
         background: '#030712', // gray-950
         surface: '#111827', // gray-900
         surfaceLight: '#1f2937', // gray-800
-        primary: '#4f46e5', // indigo-600
-        primaryLight: '#818cf8', // indigo-400
-        accent: '#0d9488', // teal-600
-        accentLight: '#2dd4bf', // teal-400
+        primary: '#2563eb', // blue-600
+        primaryLight: '#60a5fa', // blue-400
+        accent: '#0ea5e9', // sky-500
+        accentLight: '#38bdf8', // sky-400
       },
       fontFamily: {
         sans: ['"Space Grotesk"', 'sans-serif'],
