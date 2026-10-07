@@ -1,4 +1,4 @@
-import { Linkedin, Twitter, MessageCircle } from 'lucide-react';
+import { Linkedin, Twitter, MessageCircle, Github } from 'lucide-react';
 
 export default function Footer() {
   return (
@@ -17,8 +17,11 @@ export default function Footer() {
               <a href="#" className="w-10 h-10 rounded-full bg-surface border border-gray-800 flex items-center justify-center text-gray-400 hover:bg-primary hover:text-white hover:border-primary transition-all duration-300">
                 <Linkedin size={18} />
               </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-surface border border-gray-800 flex items-center justify-center text-gray-400 hover:bg-primary hover:text-white hover:border-primary transition-all duration-300">
-                <Twitter size={18} />
+              <a href="https://github.com/Jroshan106" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full bg-surface border border-gray-800 flex items-center justify-center text-gray-400 hover:bg-primary hover:text-white hover:border-primary transition-all duration-300">
+                <Github size={18} />
+              </a>
+              <a href="#" target="_blank" rel="noreferrer" className="w-10 h-10 rounded-full bg-surface border border-gray-800 flex items-center justify-center text-gray-400 hover:bg-primary hover:text-white hover:border-primary transition-all duration-300">
+                <Github size={18} />
               </a>
               <a href="https://wa.me/message/ICU5XS2G3WG7N1" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-surface border border-gray-800 flex items-center justify-center text-gray-400 hover:bg-accent hover:text-white hover:border-accent transition-all duration-300">
                 <MessageCircle size={18} />

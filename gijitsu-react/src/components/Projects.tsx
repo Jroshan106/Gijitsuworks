@@ -33,9 +33,14 @@ export default function Projects() {
             <h2 className="text-sm font-bold tracking-widest text-primaryLight uppercase mb-3">Selected Work</h2>
             <h3 className="section-title mb-0">Featured Projects</h3>
           </div>
-          <a href="https://github.com/Jroshan106" target="_blank" rel="noreferrer" className="text-gray-400 hover:text-white transition-colors flex items-center gap-2 pb-2">
-            View Github <ArrowUpRight className="w-4 h-4" />
-          </a>
+          <div className="flex gap-6">
+            <a href="https://github.com/Jroshan106" target="_blank" rel="noreferrer" className="text-gray-400 hover:text-white transition-colors flex items-center gap-2 pb-2">
+              GitHub @Roshan <ArrowUpRight className="w-4 h-4" />
+            </a>
+            <a href="#" target="_blank" rel="noreferrer" className="text-gray-400 hover:text-white transition-colors flex items-center gap-2 pb-2">
+              GitHub @Hakshan <ArrowUpRight className="w-4 h-4" />
+            </a>
+          </div>
         </motion.div>
         
         <div className="grid lg:grid-cols-2 gap-10">

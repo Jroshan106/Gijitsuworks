@@ -1,6 +1,6 @@
 import { ArrowRight, Sparkles } from 'lucide-react';
 import { motion } from 'framer-motion';
-import { SiReact, SiNodedotjs, SiTypescript, SiHtml5, SiCss3, SiCplusplus, SiPython, SiAndroidstudio, SiXcode } from 'react-icons/si';
+import { SiReact, SiNodedotjs, SiTypescript, SiHtml5, SiCss, SiCplusplus, SiPython, SiAndroidstudio, SiXcode } from 'react-icons/si';
 
 export default function Hero() {
   const techIcons = [
@@ -8,7 +8,7 @@ export default function Hero() {
     { Icon: SiNodedotjs, color: "text-[#339933]", left: "82%", top: "20%", delay: 0.5 },
     { Icon: SiTypescript, color: "text-[#3178C6]", left: "18%", top: "70%", delay: 1 },
     { Icon: SiHtml5, color: "text-[#E34F26]", left: "78%", top: "75%", delay: 1.5 },
-    { Icon: SiCss3, color: "text-[#1572B6]", left: "28%", top: "15%", delay: 0.8 },
+    { Icon: SiCss, color: "text-[#1572B6]", left: "28%", top: "15%", delay: 0.8 },
     { Icon: SiCplusplus, color: "text-[#00599C]", left: "70%", top: "12%", delay: 1.2 },
     { Icon: SiPython, color: "text-[#3776AB]", left: "8%", top: "45%", delay: 0.3 },
     { Icon: SiAndroidstudio, color: "text-[#3DDC84]", left: "88%", top: "50%", delay: 0.7 },
