@@ -59,8 +59,8 @@ export default function Contact() {
             <input type="hidden" name="subject" value={`Order ${name}`} />
             <div className="grid md:grid-cols-2 gap-6">
               <div>
-                <label htmlFor="full-name" className="block text-xs font-medium text-gray-400 uppercase tracking-widest mb-2">Name</label>
-                <input type="text" name="full-name" id="full-name" required 
+                <label htmlFor="name" className="block text-xs font-medium text-gray-400 uppercase tracking-widest mb-2">Name</label>
+                <input type="text" name="name" id="name" required 
                   value={name} onChange={(e) => setName(e.target.value)}
                   className="w-full bg-surface/50 border border-gray-700 rounded-xl px-4 py-4 text-white focus:outline-none focus:border-primaryLight focus:ring-1 focus:ring-primaryLight transition-all placeholder:text-gray-600 font-light"
                   placeholder="Peter Parker"
