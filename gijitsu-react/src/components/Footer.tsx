@@ -30,8 +30,8 @@ export default function Footer() {
             <h5 className="text-white font-display font-semibold mb-6">Connect</h5>
             <ul className="space-y-4 font-light text-gray-400">
               <li><a href="mailto:gijitsuworks@gmail.com" className="hover:text-primaryLight transition-colors">gijitsuworks@gmail.com</a></li>
-              <li><a href="https://wa.me/message/ICU5XS2G3WG7N1" className="hover:text-primaryLight transition-colors">Contact Dev 01</a></li>
-              <li><a href="https://wa.me/message/ICU5XS2G3WG7N1" className="hover:text-primaryLight transition-colors">Contact Dev 02</a></li>
+              <li><a href="https://wa.me/message/ICU5XS2G3WG7N1" className="hover:text-primaryLight transition-colors">Contact Dev @Roshan</a></li>
+              <li><a href="https://wa.me/message/ICU5XS2G3WG7N1" className="hover:text-primaryLight transition-colors">Contact Dev @Hakshan</a></li>
             </ul>
           </div>
           
