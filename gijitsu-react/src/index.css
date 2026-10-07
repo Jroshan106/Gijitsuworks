@@ -68,11 +68,12 @@
   }
 
   .animated-send-btn:hover svg {
-    transform: translateX(1.2em) rotate(45deg) scale(1.1);
+    transform: translateX(3.5em) rotate(45deg) scale(1.1);
   }
 
   .animated-send-btn:hover span {
-    transform: translateX(5em);
+    transform: translateX(10em);
+    opacity: 0;
   }
 
   .animated-send-btn:active {
