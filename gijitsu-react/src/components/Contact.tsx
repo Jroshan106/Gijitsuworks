@@ -14,8 +14,8 @@ export default function Contact() {
     setStatus('sending');
 
     emailjs.sendForm(
-      'default_service', 
-      'template_default', 
+      'service_m4yi48d', 
+      'template_p6ao7bb', 
       form.current,
       '3kYErF826wDarNmYG'
     )
