@@ -38,7 +38,7 @@
   .animated-send-btn {
     font-family: inherit;
     font-size: 16px;
-    background: theme('colors.primary');
+    @apply bg-gradient-to-r from-primary to-accent;
     color: white;
     padding: 0.8em 1.2em;
     display: inline-flex;
