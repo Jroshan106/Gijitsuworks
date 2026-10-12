@@ -17,11 +17,11 @@ export default function Footer() {
             </p>
             <div className="flex gap-6 mt-4">
               <div className="group relative">
-                <a href="#" className="flex">
-                  <Linkedin className="w-7 h-7 text-gray-400 hover:scale-125 duration-200 hover:stroke-primary transition-all" strokeWidth={1.5} />
+                <a href="https://www.fiverr.com/gijitsuworks/create-a-website-for-you?utm_medium=shared&utm_source=copy_link&utm_campaign=base_gig_create_share&utm_term=yeexw3z&view=gig&gig_id=510504562" className="flex">
+                  <Fiverr className="w-7 h-7 text-gray-400 hover:scale-125 duration-200 hover:stroke-primary transition-all" strokeWidth={1.5} />
                 </a>
                 <span className="absolute -top-12 left-[50%] -translate-x-[50%] z-20 origin-bottom scale-0 px-3 rounded-lg border border-gray-700 bg-surfaceLight py-1.5 text-sm font-medium text-white shadow-xl transition-all duration-300 ease-in-out group-hover:scale-100">
-                  LinkedIn
+                  Fiverr
                 </span>
               </div>
 
