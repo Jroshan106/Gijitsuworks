@@ -23,23 +23,23 @@ export default function Projects() {
 
   return (
     <section id="projects" className="section-padding">
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto px-4 sm:px-6">
         
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
-          className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6"
+          className="flex flex-col md:flex-row justify-between items-start md:items-end mb-10 md:mb-16 gap-6"
         >
           <div>
-            <h2 className="text-sm font-bold tracking-widest text-primaryLight uppercase mb-3">Selected Work</h2>
+            <h2 className="text-sm font-bold tracking-widest text-primaryLight uppercase mb-2 sm:mb-3">Selected Work</h2>
             <h3 className="section-title mb-0">Featured Projects</h3>
           </div>
-          <div className="flex gap-6">
-            <a href="https://github.com/Jroshan106" target="_blank" rel="noreferrer" className="text-gray-400 hover:text-white transition-colors flex items-center gap-2 pb-2">
+          <div className="flex flex-wrap gap-4 sm:gap-6">
+            <a href="https://github.com/Jroshan106" target="_blank" rel="noreferrer" className="text-gray-400 hover:text-white transition-colors flex items-center gap-1.5 text-sm sm:text-base pb-1">
               GitHub @Roshan <ArrowUpRight className="w-4 h-4" />
             </a>
-            <a href="#" target="_blank" rel="noreferrer" className="text-gray-400 hover:text-white transition-colors flex items-center gap-2 pb-2">
+            <a href="#" target="_blank" rel="noreferrer" className="text-gray-400 hover:text-white transition-colors flex items-center gap-1.5 text-sm sm:text-base pb-1">
               GitHub @Hakshan <ArrowUpRight className="w-4 h-4" />
             </a>
           </div>
@@ -80,7 +80,7 @@ export default function Projects() {
                   <span className="w-8 h-[1px] bg-gray-700"></span>
                 </div>
                 <div className="flex items-center gap-3 mb-3 flex-wrap">
-                  <h4 className="text-3xl font-display font-bold text-white group-hover:text-primaryLight transition-colors">{project.title}</h4>
+                  <h4 className="text-2xl sm:text-3xl font-display font-bold text-white group-hover:text-primaryLight transition-colors">{project.title}</h4>
                   <span className={`inline-flex items-center rounded-full border px-2.5 py-1 text-[10px] font-bold uppercase tracking-[0.18em] ${project.subtitle === "Active" ? "border-emerald-500/30 bg-emerald-500/10 text-emerald-400" : "border-red-500/20 bg-red-500/10 text-red-400"}`}>
                     {project.subtitle}
                   </span>

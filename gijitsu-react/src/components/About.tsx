@@ -22,21 +22,21 @@ export default function About() {
 
   return (
     <section id="about" className="section-padding relative">
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto px-4 sm:px-6">
         
-        <div className="flex flex-col lg:flex-row gap-16 items-center">
+        <div className="flex flex-col lg:flex-row gap-10 lg:gap-16 items-center">
           
           <motion.div 
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.7 }}
-            className="lg:w-1/2"
+            className="lg:w-1/2 w-full"
           >
-            <h2 className="text-sm font-bold tracking-widest text-primaryLight uppercase mb-3">The Studio</h2>
+            <h2 className="text-sm font-bold tracking-widest text-primaryLight uppercase mb-2 sm:mb-3">The Studio</h2>
             <h3 className="section-title">Driven by passion, defined by code.</h3>
             
-            <div className="space-y-6 text-gray-400 text-lg font-light leading-relaxed mb-10">
+            <div className="space-y-4 sm:space-y-6 text-gray-400 text-base sm:text-lg font-light leading-relaxed mb-8 sm:mb-10">
               <p>
                 Gijitsu Works is a specialized web development boutique. We are a tight-knit collective of three developers who view coding not just as engineering, but as a craft.
               </p>
@@ -51,7 +51,7 @@ export default function About() {
           </motion.div>
           
           <div className="lg:w-1/2 w-full">
-            <div className="grid gap-6">
+            <div className="grid gap-4 sm:gap-6">
               {pillars.map((pillar, idx) => (
                 <motion.div 
                   key={idx} 
@@ -60,14 +60,14 @@ export default function About() {
                   viewport={{ once: true, margin: "-50px" }}
                   transition={{ duration: 0.5, delay: idx * 0.15 }}
                   whileHover={{ scale: 1.02 }}
-                  className="glass-panel p-6 flex items-start gap-5 hover:bg-surface/60 transition-colors border-gray-800/50"
+                  className="glass-panel p-5 sm:p-6 flex items-start gap-4 sm:gap-5 hover:bg-surface/60 transition-colors border-gray-800/50"
                 >
-                  <div className="p-3 bg-surfaceLight rounded-xl border border-gray-700">
+                  <div className="p-2.5 sm:p-3 bg-surfaceLight rounded-xl border border-gray-700 shrink-0">
                     {pillar.icon}
                   </div>
                   <div>
-                    <h4 className="text-xl font-display font-bold text-white mb-2">{pillar.title}</h4>
-                    <p className="text-gray-400 text-sm leading-relaxed">{pillar.desc}</p>
+                    <h4 className="text-lg sm:text-xl font-display font-bold text-white mb-1.5 sm:mb-2">{pillar.title}</h4>
+                    <p className="text-gray-400 text-xs sm:text-sm leading-relaxed">{pillar.desc}</p>
                   </div>
                 </motion.div>
               ))}

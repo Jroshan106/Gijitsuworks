@@ -4,15 +4,15 @@ import { Link } from 'react-router-dom';
 
 export default function Footer() {
   return (
-    <footer className="bg-background pt-20 pb-10 border-t border-gray-800/50">
-      <div className="container mx-auto px-6">
+    <footer className="bg-background pt-14 sm:pt-20 pb-8 sm:pb-10 border-t border-gray-800/50">
+      <div className="container mx-auto px-4 sm:px-6">
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12 mb-12 md:mb-16">
           <div className="lg:col-span-2">
-            <a href="/#home" className="flex items-center gap-3 mb-6 inline-flex group">
-              <img src="/images/logo.png" alt="Gijitsu Works" className="h-16 w-auto group-hover:scale-105 transition-transform" />
+            <a href="/#home" className="flex items-center gap-3 mb-4 sm:mb-6 inline-flex group">
+              <img src="/images/logo.png" alt="Gijitsu Works" className="h-10 sm:h-12 md:h-16 w-auto group-hover:scale-105 transition-transform" />
             </a>
-            <p className="text-gray-400 font-light max-w-sm leading-relaxed mb-8">
+            <p className="text-gray-400 font-light max-w-sm leading-relaxed mb-6 sm:mb-8 text-sm sm:text-base">
               A modern digital studio crafting high-performance web experiences.
             </p>
             <div className="flex gap-6 mt-4">
@@ -73,11 +73,11 @@ export default function Footer() {
           </div>
         </div>
         
-        <div className="pt-8 border-t border-gray-800/50 flex flex-col md:flex-row items-center justify-between gap-4">
+        <div className="pt-8 border-t border-gray-800/50 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
           <p className="text-gray-500 text-sm font-light">
             © {new Date().getFullYear()} Gijitsu Works. All rights reserved.
           </p>
-          <div className="flex gap-6 text-sm text-gray-500 font-light">
+          <div className="flex flex-wrap justify-center gap-6 text-sm text-gray-500 font-light">
             <Link to="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
             <Link to="/terms" className="hover:text-white transition-colors">Terms of Service</Link>
           </div>

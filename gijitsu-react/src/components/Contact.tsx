@@ -33,14 +33,14 @@ export default function Contact() {
 
   return (
     <section id="contact" className="section-padding relative">
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto px-4 sm:px-6">
         
         <motion.div 
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.7 }}
-          className="max-w-4xl mx-auto glass-panel p-8 md:p-16 border-gray-800 relative overflow-hidden"
+          className="max-w-4xl mx-auto glass-panel p-6 sm:p-10 md:p-16 border-gray-800 relative overflow-hidden"
         >
           
           {/* Abstract Shape */}
@@ -50,26 +50,26 @@ export default function Contact() {
             className="absolute -top-24 -right-24 w-64 h-64 bg-primary/20 rounded-full blur-[80px] pointer-events-none"
           />
 
-          <div className="text-center mb-12 relative z-10">
-            <h2 className="text-4xl md:text-5xl font-display font-bold text-white mb-4">Let's build your own Project.</h2>
-            <p className="text-gray-400 text-lg font-light">Tell us about your project and we'll get back to you shortly.</p>
+          <div className="text-center mb-8 sm:mb-12 relative z-10">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-white mb-3 sm:mb-4">Let's build your own Project.</h2>
+            <p className="text-gray-400 text-base sm:text-lg font-light">Tell us about your project and we'll get back to you shortly.</p>
           </div>
 
-          <form ref={form} onSubmit={sendEmail} className="space-y-6 relative z-10 max-w-2xl mx-auto">
+          <form ref={form} onSubmit={sendEmail} className="space-y-5 sm:space-y-6 relative z-10 max-w-2xl mx-auto">
             <input type="hidden" name="subject" value={`Order ${name}`} />
-            <div className="grid md:grid-cols-2 gap-6">
+            <div className="grid md:grid-cols-2 gap-4 sm:gap-6">
               <div>
                 <label htmlFor="name" className="block text-xs font-medium text-gray-400 uppercase tracking-widest mb-2">Name</label>
                 <input type="text" name="name" id="name" required 
                   value={name} onChange={(e) => setName(e.target.value)}
-                  className="w-full bg-surface/50 border border-gray-700 rounded-xl px-4 py-4 text-white focus:outline-none focus:border-primaryLight focus:ring-1 focus:ring-primaryLight transition-all placeholder:text-gray-600 font-light"
+                  className="w-full bg-surface/50 border border-gray-700 rounded-xl px-4 py-3.5 sm:py-4 text-white focus:outline-none focus:border-primaryLight focus:ring-1 focus:ring-primaryLight transition-all placeholder:text-gray-600 font-light"
                   placeholder="Peter Parker"
                 />
               </div>
               <div>
                 <label htmlFor="email" className="block text-xs font-medium text-gray-400 uppercase tracking-widest mb-2">Email</label>
                 <input type="email" name="email" id="email" required 
-                  className="w-full bg-surface/50 border border-gray-700 rounded-xl px-4 py-4 text-white focus:outline-none focus:border-primaryLight focus:ring-1 focus:ring-primaryLight transition-all placeholder:text-gray-600 font-light"
+                  className="w-full bg-surface/50 border border-gray-700 rounded-xl px-4 py-3.5 sm:py-4 text-white focus:outline-none focus:border-primaryLight focus:ring-1 focus:ring-primaryLight transition-all placeholder:text-gray-600 font-light"
                   placeholder="Peter@gmail.com"
                 />
               </div>

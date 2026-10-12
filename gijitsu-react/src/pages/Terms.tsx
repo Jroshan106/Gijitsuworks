@@ -4,11 +4,11 @@ import { Link } from 'react-router-dom';
 export default function Terms() {
   return (
     <div className="min-h-screen pt-32 pb-20">
-      <div className="container mx-auto px-6 max-w-4xl">
-        <Link to="/" className="inline-flex items-center text-primaryLight hover:text-white transition-colors mb-8">
+      <div className="container mx-auto px-4 sm:px-6 max-w-4xl">
+        <Link to="/" className="inline-flex items-center text-primaryLight hover:text-white transition-colors mb-6 sm:mb-8 text-sm sm:text-base">
           <ArrowLeft className="w-4 h-4 mr-2" /> Back to Home
         </Link>
-        <h1 className="text-4xl md:text-5xl font-display font-bold text-white mb-8">Terms of Service</h1>
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-white mb-6 sm:mb-8">Terms of Service</h1>
         
         <div className="space-y-8 text-gray-400 font-light leading-relaxed">
           <section>

@@ -45,17 +45,17 @@ export default function Services() {
         className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[300px] bg-primary/10 blur-[120px] rounded-full pointer-events-none"
       />
 
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 relative z-10">
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6 }}
-          className="text-center max-w-2xl mx-auto mb-20"
+          className="text-center max-w-2xl mx-auto mb-12 sm:mb-20"
         >
-          <h2 className="text-sm font-bold tracking-widest text-accentLight uppercase mb-3">Expertise</h2>
-          <h3 className="section-title mb-6">What we do best.</h3>
-          <p className="text-gray-400 text-lg font-light">We combine technical excellence with creative thinking to deliver solutions that solve real business problems.</p>
+          <h2 className="text-sm font-bold tracking-widest text-accentLight uppercase mb-2 sm:mb-3">Expertise</h2>
+          <h3 className="section-title mb-4 sm:mb-6">What we do best.</h3>
+          <p className="text-gray-400 text-base sm:text-lg font-light">We combine technical excellence with creative thinking to deliver solutions that solve real business problems.</p>
         </motion.div>
         
         <motion.div 
@@ -63,26 +63,26 @@ export default function Services() {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, margin: "-50px" }}
-          className="grid md:grid-cols-3 gap-8"
+          className="grid md:grid-cols-3 gap-6 sm:gap-8"
         >
           {services.map((service, index) => (
             <motion.div 
               key={index} 
               variants={item}
               whileHover={{ y: -10, transition: { duration: 0.3 } }}
-              className="glass-panel p-10 group hover:border-primary/50 transition-all duration-500 relative overflow-hidden"
+              className="glass-panel p-6 sm:p-8 md:p-10 group hover:border-primary/50 transition-all duration-500 relative overflow-hidden"
             >
               {/* Hover gradient overlay */}
               <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
               
               <motion.div 
                 whileHover={{ rotate: 5, scale: 1.1 }}
-                className="text-gray-400 mb-8 group-hover:text-primaryLight transition-colors duration-500 inline-block"
+                className="text-gray-400 mb-6 sm:mb-8 group-hover:text-primaryLight transition-colors duration-500 inline-block"
               >
                 {service.icon}
               </motion.div>
-              <h4 className="text-2xl font-display font-bold text-white mb-4">{service.title}</h4>
-              <p className="text-gray-400 leading-relaxed font-light">
+              <h4 className="text-xl sm:text-2xl font-display font-bold text-white mb-3 sm:mb-4">{service.title}</h4>
+              <p className="text-gray-400 leading-relaxed font-light text-sm sm:text-base">
                 {service.description}
               </p>
             </motion.div>

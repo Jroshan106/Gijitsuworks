@@ -16,7 +16,7 @@ export default function Hero() {
   ];
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center pt-20 overflow-hidden">
+    <section id="home" className="relative min-h-screen flex items-center pt-28 pb-16 md:py-20 overflow-hidden">
       {/* Abstract Background Elements */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden z-0 pointer-events-none">
         <motion.div 
@@ -35,12 +35,12 @@ export default function Hero() {
           className="absolute bottom-[-20%] left-[20%] w-[40rem] h-[40rem] bg-indigo-900/20 rounded-full mix-blend-screen filter blur-[120px]"
         />
         
-        {/* Floating Tech Icons */}
-        <div className="absolute inset-0 pointer-events-none">
+        {/* Floating Tech Icons - Desktop only to keep mobile text 100% clean and readable */}
+        <div className="hidden md:block absolute inset-0 pointer-events-none">
           {techIcons.map((item, idx) => (
             <motion.div
               key={idx}
-              className={`absolute ${item.color} opacity-60 md:opacity-90 drop-shadow-lg`}
+              className={`absolute ${item.color} opacity-75 lg:opacity-90 drop-shadow-lg`}
               style={{ left: item.left, top: item.top }}
               animate={{ 
                 y: [0, -30, 0],
@@ -54,7 +54,7 @@ export default function Hero() {
                 delay: item.delay
               }}
             >
-              <item.Icon className="w-12 h-12 md:w-16 md:h-16" />
+              <item.Icon className="w-12 h-12 lg:w-16 lg:h-16" />
             </motion.div>
           ))}
         </div>
@@ -64,15 +64,14 @@ export default function Hero() {
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
       </div>
 
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 relative z-10">
         <div className="max-w-4xl mx-auto text-center flex flex-col items-center">
-          
           
           <motion.h1 
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.2 }}
-            className="text-5xl md:text-7xl lg:text-8xl font-display font-bold text-white leading-[1.1] mb-8 tracking-tight drop-shadow-2xl"
+            className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-display font-bold text-white leading-[1.15] mb-6 sm:mb-8 tracking-tight drop-shadow-2xl"
           >
             We craft <span className="text-transparent bg-clip-text bg-gradient-to-r from-primaryLight via-primary to-accentLight">digital</span> <br/>
             experiences.
@@ -82,7 +81,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.4 }}
-            className="text-lg md:text-xl text-gray-300 mb-10 max-w-2xl leading-relaxed font-light drop-shadow-md"
+            className="text-base sm:text-lg md:text-xl text-gray-300 mb-8 sm:mb-10 max-w-2xl leading-relaxed font-light drop-shadow-md px-2 sm:px-0"
           >
             Gijitsu Works transforms ambitious ideas into remarkable digital products. We specialize in high-performance web development and creative design.
           </motion.p>
@@ -91,15 +90,35 @@ export default function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.6 }}
-            className="flex flex-col sm:flex-row gap-5 w-full sm:w-auto"
+            className="flex flex-col sm:flex-row gap-4 sm:gap-5 w-full sm:w-auto"
           >
-            <a href="/#projects" className="btn-primary group shadow-[0_0_20px_rgba(79,70,229,0.3)] hover:shadow-[0_0_30px_rgba(79,70,229,0.5)]">
+            <a href="/#projects" className="btn-primary group shadow-[0_0_20px_rgba(37,99,235,0.3)] hover:shadow-[0_0_30px_rgba(37,99,235,0.5)] justify-center">
               View Our Work
               <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </a>
-            <a href="/#about" className="btn-outline backdrop-blur-sm bg-surface/30">
+            <a href="/#about" className="btn-outline backdrop-blur-sm bg-surface/30 justify-center">
               Who We Are
             </a>
+          </motion.div>
+
+          {/* Mobile Tech Stack Dock */}
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.8 }}
+            className="md:hidden mt-10 w-full pt-6 border-t border-gray-800/60"
+          >
+            <p className="text-[11px] font-mono tracking-widest text-gray-400 uppercase mb-3 text-center">Tech Stack</p>
+            <div className="flex flex-wrap justify-center items-center gap-2.5 px-2">
+              {techIcons.map((item, idx) => (
+                <div
+                  key={idx}
+                  className={`p-2 rounded-xl bg-surface/80 border border-gray-800/80 ${item.color} shadow-sm backdrop-blur-md`}
+                >
+                  <item.Icon className="w-5 h-5" />
+                </div>
+              ))}
+            </div>
           </motion.div>
 
         </div>

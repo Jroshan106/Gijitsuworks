@@ -20,11 +20,11 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className={`fixed w-full z-50 transition-all duration-500 ${isScrolled ? 'py-4' : 'py-6'}`}>
-      <div className="container mx-auto px-6">
-        <div className={`flex items-center justify-between transition-all duration-500 rounded-full ${isScrolled ? 'bg-surface/80 backdrop-blur-xl px-8 py-3 shadow-2xl' : 'px-2 py-2'}`}>
+    <nav className={`fixed w-full z-50 transition-all duration-500 ${isScrolled ? 'py-2 sm:py-3 md:py-4' : 'py-3 sm:py-4 md:py-6'}`}>
+      <div className="container mx-auto px-4 sm:px-6">
+        <div className={`flex items-center justify-between transition-all duration-500 rounded-full ${isScrolled ? 'bg-surface/85 backdrop-blur-xl px-4 sm:px-8 py-2 sm:py-3 shadow-2xl border border-gray-800/40' : 'px-2 py-2'}`}>
           <a href="/#home" className="flex items-center gap-3 group">
-            <img src="/images/logo.png" alt="Gijitsu Works" className="h-16 w-auto group-hover:scale-105 transition-transform" />
+            <img src="/images/logo.png" alt="Gijitsu Works" className="h-10 sm:h-12 md:h-16 w-auto group-hover:scale-105 transition-transform" />
           </a>
 
           {/* Desktop Menu */}
@@ -41,7 +41,7 @@ export default function Navbar() {
                 </li>
               ))}
             </ul>
-            <a href="#contact" className="btn-primary py-2.5 px-7 text-sm">
+            <a href="/#contact" className="btn-primary py-2.5 px-7 text-sm">
               Create Your Project
             </a>
           </div>
@@ -50,7 +50,8 @@ export default function Navbar() {
           <div className="md:hidden">
             <button 
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="text-white p-2"
+              className="text-white p-2 focus:outline-none"
+              aria-label="Toggle menu"
             >
               {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -59,8 +60,8 @@ export default function Navbar() {
       </div>
 
       {/* Mobile Menu */}
-      <div className={`md:hidden absolute top-full left-0 w-full glass-panel border-t-0 border-x-0 rounded-none transition-all duration-300 overflow-hidden ${isMobileMenuOpen ? 'max-h-96 py-6 border-b border-gray-800' : 'max-h-0 py-0 border-none'}`}>
-        <div className="flex flex-col items-center gap-6">
+      <div className={`md:hidden absolute top-full left-0 w-full bg-background/95 backdrop-blur-2xl border-t-0 border-x-0 rounded-none transition-all duration-300 overflow-hidden ${isMobileMenuOpen ? 'max-h-96 py-6 border-b border-gray-800 shadow-2xl' : 'max-h-0 py-0 border-none'}`}>
+        <div className="flex flex-col items-center gap-6 px-6">
           {navLinks.map((link) => (
             <a 
               key={link.name}
@@ -71,7 +72,7 @@ export default function Navbar() {
               {link.name}
             </a>
           ))}
-          <a href="/#contact" className="btn-primary mt-2" onClick={() => setIsMobileMenuOpen(false)}>
+          <a href="/#contact" className="btn-primary w-full text-center mt-2 justify-center" onClick={() => setIsMobileMenuOpen(false)}>
             Start Your Project
           </a>
         </div>
