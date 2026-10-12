@@ -38,11 +38,9 @@ export default function Services() {
   return (
     <section id="services" className="section-padding bg-surface/30 border-y border-gray-800/50 relative overflow-hidden">
       
-      {/* Background glow */}
-      <motion.div 
-        animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.5, 0.3] }}
-        transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[300px] bg-primary/10 blur-[120px] rounded-full pointer-events-none"
+      {/* Background glow - GPU Accelerated, Static to eliminate scroll lag */}
+      <div 
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[250px] bg-primary/10 blur-[90px] rounded-full pointer-events-none transform-gpu"
       />
 
       <div className="container mx-auto px-4 sm:px-6 relative z-10">

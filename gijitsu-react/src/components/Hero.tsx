@@ -17,51 +17,36 @@ export default function Hero() {
 
   return (
     <section id="home" className="relative min-h-screen flex items-center pt-28 pb-16 md:py-20 overflow-hidden">
-      {/* Abstract Background Elements */}
+      {/* High-Performance Ambient Background Glows (GPU Accelerated, No Blend-Mode Overhead) */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden z-0 pointer-events-none">
-        <motion.div 
-          animate={{ scale: [1, 1.2, 1], rotate: [0, 90, 0] }}
-          transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-          className="absolute top-[-10%] left-[-10%] w-96 h-96 bg-primary/20 rounded-full mix-blend-screen filter blur-[100px]"
-        />
-        <motion.div 
-          animate={{ scale: [1, 1.3, 1], rotate: [0, -90, 0] }}
-          transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
-          className="absolute top-[20%] right-[-10%] w-96 h-96 bg-accent/10 rounded-full mix-blend-screen filter blur-[100px]"
-        />
-        <motion.div 
-          animate={{ scale: [1, 1.1, 1], x: [0, 50, 0], y: [0, 30, 0] }}
-          transition={{ duration: 15, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute bottom-[-20%] left-[20%] w-[40rem] h-[40rem] bg-indigo-900/20 rounded-full mix-blend-screen filter blur-[120px]"
-        />
+        <div className="absolute top-[-5%] left-[-5%] w-80 sm:w-96 h-80 sm:h-96 bg-primary/20 rounded-full filter blur-[80px] transform-gpu" />
+        <div className="absolute top-[25%] right-[-5%] w-80 sm:w-96 h-80 sm:h-96 bg-accent/15 rounded-full filter blur-[80px] transform-gpu" />
+        <div className="absolute bottom-[-10%] left-[25%] w-[32rem] h-[32rem] bg-blue-900/15 rounded-full filter blur-[90px] transform-gpu" />
         
-        {/* Floating Tech Icons - Desktop only to keep mobile text 100% clean and readable */}
+        {/* Floating Tech Icons - Desktop only, GPU-accelerated smooth float */}
         <div className="hidden md:block absolute inset-0 pointer-events-none">
           {techIcons.map((item, idx) => (
             <motion.div
               key={idx}
-              className={`absolute ${item.color} opacity-75 lg:opacity-90 drop-shadow-lg`}
+              className={`absolute ${item.color} opacity-80 hover:opacity-100 transition-opacity transform-gpu`}
               style={{ left: item.left, top: item.top }}
               animate={{ 
-                y: [0, -30, 0],
-                rotate: [0, 15, -15, 0],
-                scale: [1, 1.1, 1]
+                y: [0, -18, 0]
               }}
               transition={{
-                duration: 6 + (idx % 3),
+                duration: 4.5 + (idx % 3),
                 repeat: Infinity,
                 ease: "easeInOut",
                 delay: item.delay
               }}
             >
-              <item.Icon className="w-12 h-12 lg:w-16 lg:h-16" />
+              <item.Icon className="w-12 h-12 lg:w-14 lg:h-14 filter drop-shadow-sm" />
             </motion.div>
           ))}
         </div>
 
-        {/* Grid pattern overlay */}
-        <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 mix-blend-overlay"></div>
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]"></div>
+        {/* Clean, high-performance tech grid overlay */}
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:28px_28px] [mask-image:radial-gradient(ellipse_70%_60%_at_50%_35%,#000_60%,transparent_100%)]"></div>
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 relative z-10">

@@ -30,7 +30,7 @@
   }
 
   .glass-panel {
-    @apply bg-surface/40 backdrop-blur-xl border border-gray-800 rounded-3xl;
+    @apply bg-surface/75 backdrop-blur-md border border-gray-800/80 rounded-3xl;
   }
 }
 

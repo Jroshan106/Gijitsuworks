@@ -43,11 +43,9 @@ export default function Contact() {
           className="max-w-4xl mx-auto glass-panel p-6 sm:p-10 md:p-16 border-gray-800 relative overflow-hidden"
         >
           
-          {/* Abstract Shape */}
-          <motion.div 
-            animate={{ scale: [1, 1.2, 1], rotate: [0, 180, 360] }}
-            transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-            className="absolute -top-24 -right-24 w-64 h-64 bg-primary/20 rounded-full blur-[80px] pointer-events-none"
+          {/* Abstract Shape - GPU Accelerated, Static to eliminate scroll lag */}
+          <div 
+            className="absolute -top-24 -right-24 w-64 h-64 bg-primary/15 rounded-full blur-[70px] pointer-events-none transform-gpu"
           />
 
           <div className="text-center mb-8 sm:mb-12 relative z-10">

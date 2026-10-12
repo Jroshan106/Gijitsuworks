@@ -6,10 +6,17 @@ export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
+    let ticking = false;
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          setIsScrolled(window.scrollY > 20);
+          ticking = false;
+        });
+        ticking = true;
+      }
     };
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -20,9 +27,9 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className={`fixed w-full z-50 transition-all duration-500 ${isScrolled ? 'py-2 sm:py-3 md:py-4' : 'py-3 sm:py-4 md:py-6'}`}>
+    <nav className={`fixed w-full z-50 transition-[padding] duration-300 ${isScrolled ? 'py-2 sm:py-3 md:py-4' : 'py-3 sm:py-4 md:py-6'}`}>
       <div className="container mx-auto px-4 sm:px-6">
-        <div className={`flex items-center justify-between transition-all duration-500 rounded-full ${isScrolled ? 'bg-surface/85 backdrop-blur-xl px-4 sm:px-8 py-2 sm:py-3 shadow-2xl border border-gray-800/40' : 'px-2 py-2'}`}>
+        <div className={`flex items-center justify-between transition-all duration-300 rounded-full ${isScrolled ? 'bg-surface/85 backdrop-blur-md px-4 sm:px-8 py-2 sm:py-3 shadow-2xl border border-gray-800/40' : 'px-2 py-2'}`}>
           <a href="/#home" className="flex items-center gap-3 group">
             <img src="/images/logo.png" alt="Gijitsu Works" className="h-10 sm:h-12 md:h-16 w-auto group-hover:scale-105 transition-transform" />
           </a>
